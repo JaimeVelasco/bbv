@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,900');
+body {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 400;
+}
+
+.bv_nav {
+	background-color: #323f48;
+}
+
+.navbar-burger span {
+  background-color: white;
+}
+
+#navMenu {
+    margin-left: 5rem;
+}
+
+.navbar-item {
+	color: white;
+	font-size: .8rem;
+	font-weight: 600;
+}
+
+.navbar-start {
+	margin: 0 auto;
+}
+
+.bv_main {
+	height: 60vh;
+	background-image: url("assets/header.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bv_main_copy {
+	color: white;
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: 4rem
+}
+
+
+.bv_mission {
+	height: 80vh;
+	background-image: url("assets/mission.png");
+	background-size: 87%;
+	background-repeat: no-repeat;
+	margin-bottom: 5rem;
+  background-position: center;
+}
+
+.bv_beehive {
+	height: 60vh;
+	background-image: url("assets/beehive.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}

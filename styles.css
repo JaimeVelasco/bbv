@@ -57,3 +57,17 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+.bv_pens {
+	height: 80vh;
+	background-image: url("assets/pens.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bv_shop {
+	height: 80vh;
+	background-image: url("assets/shop.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}

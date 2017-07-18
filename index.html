@@ -7,8 +7,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css" />
 		<link rel="stylesheet" href="styles.css">
 		<script
-		  src="https://code.jquery.com/jquery-3.2.1.min.js"
-		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  src="https://code.jquery.com/jquery-2.2.4.min.js"
+		  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		  crossorigin="anonymous">
 		</script>
 	</head>
@@ -32,19 +32,19 @@
 		      <a class="navbar-item" href="/">
 		        HOME.
 		      </a>
-		      <a class="navbar-item" href="#">
+		      <a class="navbar-item" href="#" id="products">
 		        PRODUCTS.
 		      </a>
-		      <a class="navbar-item" href="#">
+		      <a class="navbar-item" href="#" id="shop">
 		        SHOP.
 		      </a>
-		      <a class="navbar-item" href="#">
+		      <a class="navbar-item" href="#" id="events">
 		        EVENTS.
 		      </a>
-		      <a class="navbar-item" href="#">
+		      <a class="navbar-item" href="#" id="locator">
 		        LOCATOR.
 		      </a>
-		      <a class="navbar-item" href="#">
+		      <a class="navbar-item" href="#" id="faq">
 		        FAQ.
 		      </a>
 		    </div>
@@ -115,15 +115,54 @@
 		  <img src="assets/Footer.png">
 		</figure>
 
-		<script async type="text/javascript">
-			(function() {
-		    var burger = document.querySelector('.nav-toggle');
-		    var menu = document.querySelector('.nav-menu');
-		    burger.addEventListener('click', function() {
-		        burger.classList.toggle('is-active');
-		        menu.classList.toggle('is-active');
-		    });
-			})();
+		<script type="text/javascript">
+			$(".burger").click(function() {
+			    $(".burger").toggleClass("is-active");
+			    $(".navbar-menu").toggleClass("is-active");
+			});
+
+			$("#products").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $(".bv_pens").offset().top
+			    }, 2000);
+					$(".burger").removeClass("is-active");
+					$(".navbar-menu").removeClass("is-active");
+			});
+
+			$("#shop").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $(".bv_shop").offset().top
+			    }, 2000);
+					$(".burger").removeClass("is-active");
+					$(".navbar-menu").removeClass("is-active");
+			});
+
+
+			$("#events").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $(".bv_events").offset().top
+			    }, 2000);
+					$(".burger").removeClass("is-active");
+					$(".navbar-menu").removeClass("is-active");
+			});
+
+
+			$("#locator").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $(".bv_locate").offset().top
+			    }, 2000);
+					$(".burger").removeClass("is-active");
+					$(".navbar-menu").removeClass("is-active");
+			});
+
+
+			$("#faq").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $(".bv_faq").offset().top
+			    }, 2000);
+					$(".burger").removeClass("is-active");
+					$(".navbar-menu").removeClass("is-active");
+			});
 		</script>
 
 	</body>

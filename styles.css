@@ -27,10 +27,7 @@ body {
 }
 
 .bv_main {
-	height: 60vh;
-	background-image: url("assets/header.png");
-	background-size: cover;
-	background-repeat: no-repeat;
+
 }
 
 .bv_main_copy {
@@ -43,31 +40,31 @@ body {
 
 
 .bv_mission {
-	height: 80vh;
-	background-image: url("assets/mission.png");
-	background-size: 87%;
-	background-repeat: no-repeat;
-	margin-bottom: 5rem;
-  background-position: center;
+	margin: 0rem 3rem 5rem 3rem;
 }
 
 .bv_beehive {
-	height: 60vh;
-	background-image: url("assets/beehive.png");
-	background-size: cover;
-	background-repeat: no-repeat;
+
 }
 
 .bv_pens {
-	height: 80vh;
-	background-image: url("assets/pens.png");
-	background-size: cover;
-	background-repeat: no-repeat;
+	margin: 0 0 3rem 0;
 }
 
 .bv_shop {
-	height: 80vh;
-	background-image: url("assets/shop.png");
-	background-size: cover;
-	background-repeat: no-repeat;
+	margin: 0rem 3rem 5rem 3rem;
+}
+
+
+.bv_events {
+	margin-bottom: 3rem;
+}
+
+.bv_locate {
+
+}
+
+
+.bv_faq {
+	margin: 3rem 3rem 3rem 0;
 }

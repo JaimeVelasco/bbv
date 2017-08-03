@@ -12,9 +12,11 @@ $(".burger").click(function() {
 });
 
 
-// Main Navigation scroll scripts
+// *** Main Navigation scroll scripts
 // Each triggered by a nav button
 // TODO: Consolidate in a more efficient way. Maybe switch/case?
+// ***
+
 $("#products").click(function() {
 		$('html, body').animate({
 				scrollTop: $(".bv_pens").offset().top

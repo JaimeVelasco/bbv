@@ -1,17 +1,13 @@
-# bbv
-### First iterations of BBV site
-
-## A serverless mkt site and email colelctor
-
-### Technologies used:
+# BumbleBee Vapes   
+## A serverless mkt site and email colelctor  
+#### Technologies used:  
 Google App Platform (Google drive, Google Maps, Firebase)
 Zapier  
 Bulma  
 jQuery  
-github  
+Github   
+#### Map spreadsheet
+https://docs.google.com/spreadsheets/d/1Lr-h5Wb1zVJfrzmavVAHf3tRWrCuzFpXZC-wd-4_bJk/edit#gid=0
 
-
-### Map spreadsheet
-https://docs.google.com/spreadsheets/d/1zdrFPnuwliUh2t7GMP--2sry2s3I9HwcdC4oqa8sobc/edit#gid=0
-
-###
+#### Email spreadsheet
+[Link to google drive document](https://docs.google.com/a/jaimevelas.co/spreadsheets/d/1zdrFPnuwliUh2t7GMP--2sry2s3I9HwcdC4oqa8sobc/edit?usp=sharing)

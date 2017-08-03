@@ -51,7 +51,7 @@ setTimeout(function () {
 }, 1000);
 
 
-$('.modal-close, .noThanks, #formSubmit').click(function() {
+$('.modal-close, .noThanks').click(function() {
 		$(".modal").removeClass("is-active");
 });
 
@@ -65,20 +65,17 @@ $("#formSubmit").click(function() {
 	var zdata = formatForZapier(email, zipCode, name)
 	// log in console
 	console.log(zdata)
+
 	// post
 	 $.ajax({
-		 // url is what you get from activating the "Incoming WebHooks" slack integration
-		 // if you leave, you should see an error message "No Team", status 404
 		 url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
 		 type: 'POST',
 		 processData: true,
 		 data : zdata ,
 		 success : function(data) {
-			 // success will show on page
 			 console.log(data)
 		 },
 		 error: function(data){
-			 // error will show error object
 			 console.log(data)
 		}
 	 });

@@ -56,45 +56,48 @@ $('.modal-close, .noThanks').click(function() {
 });
 
 
-$("#formSubmit").click(function() {
+$("#formSubmit").click(function(event) {
 	// get email, zip and name to be posted
 	var email = document.getElementById('email').value
 	var zipCode = document.getElementById('zipCode').value
 	var name = document.getElementById('name').value
 	// format payload for zapier
 	var zdata = formatForZapier(email, zipCode, name)
-	// log in console
-	console.log(zdata)
 
 	if (email !== "" && zipCode !== "" && name !== "") {
+		event.preventDefault()
 		var validate = validateEmail(email)
 		console.log(validate)
 		if (validate) {
 			// post
-			 $.ajax({
-				 url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
-				 type: 'POST',
-				 processData: true,
-				 data : zdata ,
-				 success : function(data) {
-					 console.log(data)
-				 },
-				 error: function(data){
-					 console.log(data)
+			$.ajax({
+				url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
+				type: 'POST',
+				processData: true,
+				data : zdata ,
+				success : function(data) {
+					console.log("success", data)
+
+				},
+				error: function(data){
+					console.log("error", data)
 				}
-			 });
+			});
 		}
 	}
 
+
 	function validateEmail(email) {
-	    var atpos = email.indexOf("@");
-	    var dotpos = email.lastIndexOf(".");
+	    var atpos = email.indexOf("@")
+	    var dotpos = email.lastIndexOf(".")
 	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
-	        return false;
-	    }
+	        return false
+			} else {
+				return email
+			}
 	}
 
-  function formatForZapier(email, name, zipCode){
+  function formatForZapier(email, zipCode, name){
 		var date = new Date()
     var payload ={
       "email": email,

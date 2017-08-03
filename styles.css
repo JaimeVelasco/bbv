@@ -1,5 +1,93 @@
-/*@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,900');*/
 @import url('https://fonts.googleapis.com/css?family=Lato:200,400,900');
+
+*, *::before, *::after{
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+html, body{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato',sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  height: 100%;
+  color: #fff;
+}
+
+.product{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+figcaption{
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  text-align: center;
+  font-weight: bold;
+	width: 9rem;
+	height: 3rem;
+  display: table;
+	margin: auto;
+}
+
+figcaption div{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+figcaption div:after{
+  position: absolute;
+  content: "";
+  left: 0; right: 0;
+  bottom: 40%;
+  text-align: center;
+  margin: auto;
+  width: 0%;
+  height: 2px;
+  background: #2c3e50;
+}
+
+.product img{
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.product:hover figcaption{
+ background: rgba(255,255,255,0.3);
+}
+
+figcaption:hover div{
+  opacity: 1;
+  top: 0;
+}
+
+figcaption:hover div:after{
+  width: 50%;
+}
+
+.product:hover img{
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+          transform: scale3d(1.1, 1.1, 1);
+}
+
+
+
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -175,4 +263,9 @@ input {
 
 #calendar {
 	padding: 5rem;
+}
+
+
+.product:hover {
+
 }

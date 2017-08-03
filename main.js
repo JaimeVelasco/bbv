@@ -1,3 +1,10 @@
+if (localStorage.getItem("bumbleBee") !== "true") {
+	setTimeout(function () {
+		$(".modal").addClass("is-active");
+	}, 1000);
+}
+
+
 $(".burger").click(function() {
 		$(".burger").toggleClass("is-active");
 		$(".navbar-menu").toggleClass("is-active");
@@ -46,15 +53,14 @@ $("#faq").click(function() {
 		$(".navbar-menu").removeClass("is-active");
 });
 
-setTimeout(function () {
-	$(".modal").addClass("is-active");
-}, 1000);
-
-
+// Close emailCollector
 $('.modal-close, .noThanks').click(function() {
 		$(".modal").removeClass("is-active");
 });
 
+$('.noThanks').click(function() {
+		localStorage.setItem("bumbleBee", true);
+});
 
 $("#formSubmit").click(function(event) {
 	// get email, zip and name to be posted
@@ -79,6 +85,7 @@ $("#formSubmit").click(function(event) {
 				success : function(data) {
 					console.log("success", data)
 					$("#pincheForm").submit()
+					localStorage.setItem("bumbleBee", true);
 				},
 				error: function(data){
 					console.log("error", data)

@@ -105,7 +105,8 @@
 									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SI4kafjFHWw" frameborder="0" allowfullscreen></iframe>
 								</div>
 							</div>
-						  <div class="tile is-6 is-parent is-vertical">
+
+						  <form class="tile is-6 is-parent is-vertical">
 								<div class="tile is-child is-12">
 									<p class="enterToWin">ENTER TO WIN $500</p>
 								</div>
@@ -113,14 +114,14 @@
 									<div class="tile is-child" id="m-r">
 										<div class="field">
 											<div class="control">
-												<input class="input" id="name" type="text" placeholder="NAME">
+												<input class="input" id="name" type="text" placeholder="NAME" required>
 											</div>
 										</div>
 									</div>
 									<div class="tile is-child">
 										<div class="field ">
 											<div class="control">
-												<input class="input" id="zipCode" type="text" placeholder="ZIP CODE">
+												<input class="input" id="zipCode" type="number" placeholder="ZIP CODE" required>
 											</div>
 										</div>
 									</div>
@@ -129,14 +130,14 @@
 									<div class="tile is-child">
 										<div class="field">
 											<div class="control">
-												<input class="input" id="email" type="text" placeholder="EMAIL">
+												<input class="input" id="email" type="email" placeholder="EMAIL" required>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="tile">
 									<div class="tile is-child">
-										<button class="button is-light" id="formSubmit">LETS DO THIS</button>
+										<button type="submit" class="button is-light" id="formSubmit">LETS DO THIS</button>
 									</div>
 								</div>
 								<div class="tile">
@@ -144,7 +145,8 @@
 										<button class="button is-link noThanks">NO THANKS</button>
 									</div>
 								</div>
-						  </div>
+						  </form>
+
 						</div>
 				  </div>
 				</section>

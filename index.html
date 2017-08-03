@@ -6,11 +6,28 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css" />
 		<link rel="stylesheet" href="styles.css">
+
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyDTchze2Ms9gTlcaJW8J4wrP5BgyrQ_wlw",
+				authDomain: "bumblebee-2053b.firebaseapp.com",
+				databaseURL: "https://bumblebee-2053b.firebaseio.com",
+				projectId: "bumblebee-2053b",
+				storageBucket: "bumblebee-2053b.appspot.com",
+				messagingSenderId: "847168397202"
+			};
+			firebase.initializeApp(config);
+		</script>
+
+
 		<script
 		  src="https://code.jquery.com/jquery-2.2.4.min.js"
 		  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		  crossorigin="anonymous">
 		</script>
+
 	</head>
 	<body>
 
@@ -66,9 +83,75 @@
 						</span>
 		      </a>
 				</div>
-
 		  </div>
 		</nav>
+
+
+		<div class="modal" id="collector">
+		  <div class="modal-background"></div>
+		  <div class="modal-content">
+				<section class="hero">
+				  <div class="hero-body">
+						<div class="columns">
+							<div class="column">
+								<figure class="image is-64x64 centered">
+									<img src="assets/bee.png" alt="bee">
+								</figure>
+							</div>
+						</div>
+						<div class="tile is-ancestor">
+							<div class="tile is-parent">
+								<div class="tile is-child">
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SI4kafjFHWw" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						  <div class="tile is-6 is-parent is-vertical">
+								<div class="tile is-child is-12">
+									<p class="enterToWin">ENTER TO WIN $500</p>
+								</div>
+								<div class="tile">
+									<div class="tile is-child" id="m-r">
+										<div class="field">
+											<div class="control">
+												<input class="input" id="name" type="text" placeholder="NAME">
+											</div>
+										</div>
+									</div>
+									<div class="tile is-child">
+										<div class="field ">
+											<div class="control">
+												<input class="input" id="zipCode" type="text" placeholder="ZIP CODE">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tile">
+									<div class="tile is-child">
+										<div class="field">
+											<div class="control">
+												<input class="input" id="email" type="text" placeholder="EMAIL">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tile">
+									<div class="tile is-child">
+										<button class="button is-light" id="formSubmit">LETS DO THIS</button>
+									</div>
+								</div>
+								<div class="tile">
+									<div class="tile is-child">
+										<button class="button is-link noThanks">NO THANKS</button>
+									</div>
+								</div>
+						  </div>
+						</div>
+				  </div>
+				</section>
+		  </div>
+		  <button class="modal-close is-large"></button>
+		</div>
+
 
 
 
@@ -115,55 +198,7 @@
 		  <img src="assets/Footer.png">
 		</figure>
 
-		<script type="text/javascript">
-			$(".burger").click(function() {
-			    $(".burger").toggleClass("is-active");
-			    $(".navbar-menu").toggleClass("is-active");
-			});
-
-			$("#products").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $(".bv_pens").offset().top
-			    }, 2000);
-					$(".burger").removeClass("is-active");
-					$(".navbar-menu").removeClass("is-active");
-			});
-
-			$("#shop").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $(".bv_shop").offset().top
-			    }, 2000);
-					$(".burger").removeClass("is-active");
-					$(".navbar-menu").removeClass("is-active");
-			});
-
-
-			$("#events").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $(".bv_events").offset().top
-			    }, 2000);
-					$(".burger").removeClass("is-active");
-					$(".navbar-menu").removeClass("is-active");
-			});
-
-
-			$("#locator").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $(".bv_locate").offset().top
-			    }, 2000);
-					$(".burger").removeClass("is-active");
-					$(".navbar-menu").removeClass("is-active");
-			});
-
-
-			$("#faq").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $(".bv_faq").offset().top
-			    }, 2000);
-					$(".burger").removeClass("is-active");
-					$(".navbar-menu").removeClass("is-active");
-			});
-		</script>
+		<script src="main.js"></script>
 
 	</body>
 </html>

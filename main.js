@@ -65,10 +65,11 @@ $("#formSubmit").click(function(event) {
 	var zdata = formatForZapier(email, zipCode, name)
 
 	if (email !== "" && zipCode !== "" && name !== "") {
-		event.preventDefault()
-		var validate = validateEmail(email)
-		console.log(validate)
-		if (validate) {
+		console.log("validateEmail(email)", validateEmail(email));
+		if (validateEmail(email)) {
+			console.log("inside", validateEmail(email));
+			 event.preventDefault()
+
 			// post
 			$.ajax({
 				url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
@@ -77,24 +78,31 @@ $("#formSubmit").click(function(event) {
 				data : zdata ,
 				success : function(data) {
 					console.log("success", data)
-					$("#pincheForm").submit()
+					// $("#pincheForm").submit()
 				},
 				error: function(data){
 					console.log("error", data)
 				}
 			});
+		} else if (!validateEmail(email)){
+			// event.preventDefault()
+			var element = document.getElementById("email");
+				element.oninvalid = function(e) {
+						e.target.setCustomValidity("");
+						if (!e.target.validity.valid) {
+								e.target.setCustomValidity("Something is wrong with your email");
+						}
+				};
+				element.oninput = function(e) {
+						e.target.setCustomValidity("");
+				};
 		}
 	}
 
 
 	function validateEmail(email) {
-	    var atpos = email.indexOf("@")
-	    var dotpos = email.lastIndexOf(".")
-	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
-	        return false
-			} else {
-				return email
-			}
+			var regex =  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+	    return regex.test(email)
 	}
 
   function formatForZapier(email, zipCode, name){

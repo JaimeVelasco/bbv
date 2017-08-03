@@ -78,7 +78,7 @@ $("#formSubmit").click(function(event) {
 				data : zdata ,
 				success : function(data) {
 					console.log("success", data)
-					// $("#pincheForm").submit()
+					$("#pincheForm").submit()
 				},
 				error: function(data){
 					console.log("error", data)

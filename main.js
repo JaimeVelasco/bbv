@@ -66,19 +66,33 @@ $("#formSubmit").click(function() {
 	// log in console
 	console.log(zdata)
 
-	// post
-	 $.ajax({
-		 url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
-		 type: 'POST',
-		 processData: true,
-		 data : zdata ,
-		 success : function(data) {
-			 console.log(data)
-		 },
-		 error: function(data){
-			 console.log(data)
+	if (email !== "" && zipCode !== "" && name !== "") {
+		var validate = validateEmail(email)
+		console.log(validate)
+		if (validate) {
+			// post
+			 $.ajax({
+				 url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
+				 type: 'POST',
+				 processData: true,
+				 data : zdata ,
+				 success : function(data) {
+					 console.log(data)
+				 },
+				 error: function(data){
+					 console.log(data)
+				}
+			 });
 		}
-	 });
+	}
+
+	function validateEmail(email) {
+	    var atpos = email.indexOf("@");
+	    var dotpos = email.lastIndexOf(".");
+	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+	        return false;
+	    }
+	}
 
   function formatForZapier(email, name, zipCode){
 		var date = new Date()

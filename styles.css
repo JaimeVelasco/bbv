@@ -62,7 +62,15 @@ body {
 }
 
 .bv_locate {
+	height: 80vh;
+	padding:  0;
+}
 
+@media (min-width: 1000px) {
+	.bv_locate {
+		height: 90vh;
+		padding: 0 5rem;
+	}
 }
 
 .bv_faq {

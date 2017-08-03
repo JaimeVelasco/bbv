@@ -164,3 +164,7 @@ input {
 	font-weight: 900;
 	background-color: transparent !important;
 }
+
+#calendar {
+	padding: 5rem;
+}

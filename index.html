@@ -182,7 +182,17 @@
 
 
 		<figure class="image bv_events">
-		  <img src="assets/searchEvents.png">
+			<section id="calendar">
+				<div id="app-container"></div><script>(function () {
+					window.eventCalId=564;
+					window.eventCalWidgetUuid="a8695840-5d3d-445b-bacd-b2d19ab44fdc";
+					var integrationScript = document.createElement("script");
+					integrationScript.async = 1;
+					integrationScript.setAttribute("src", "https://api.eventcalendarapp.com/integration-script.js");
+					document.head.appendChild(integrationScript);
+				})();
+				</script>
+			</section>
 		</figure>
 
 

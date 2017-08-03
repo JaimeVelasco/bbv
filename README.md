@@ -1,11 +1,11 @@
 # BumbleBee Vapes   
-## A serverless mkt site and email colelctor  
+## A serverless mkt site and email collector  
 #### Technologies used:  
-Google App Platform (Google drive, Google Maps, Firebase)
-Zapier  
-Bulma  
-jQuery  
-Github   
+***Google App Platform*** (Google drive, Google Maps, Firebase).  
+***Zapier***  For automation.    
+***Bulma*** ([link](http://bulma.io/)) CSS framework/style-guide.  
+***jQuery***, because it's easy.  
+***Github*** Source control ***and*** fre hosing!
 #### Map spreadsheet
 We use a google spreadsheet to add locations to the map.  
 [Link to google drive document](https://docs.google.com/spreadsheets/d/1Lr-h5Wb1zVJfrzmavVAHf3tRWrCuzFpXZC-wd-4_bJk/edit#gid=0)

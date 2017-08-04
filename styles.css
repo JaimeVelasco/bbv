@@ -13,7 +13,7 @@ html, body{
   padding: 0px;
   font-family: 'Lato',sans-serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   height: 100%;
   color: #fff;
 }
@@ -87,12 +87,6 @@ figcaption:hover div:after{
 }
 
 
-
-body {
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-}
-
 .bv_nav {
 	background-color: #323f48;
 }
@@ -151,14 +145,23 @@ body {
 
 .bv_locate {
 	height: 80vh;
-	padding:  0;
+	padding:  0 5rem;
 }
 
-@media (min-width: 1000px) {
+
+@media (max-width: 768px) {
 	.bv_locate {
 		height: 90vh;
-		padding: 0 5rem;
+		padding: 0;
 	}
+
+	#m-r {
+		margin-right: 0 !important;
+	}
+}
+
+@-ms-viewport{
+  width: device-width;
 }
 
 .bv_faq {

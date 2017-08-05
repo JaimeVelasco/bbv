@@ -185,7 +185,6 @@ figcaption:hover div:after{
 	margin: 0rem 3rem 5rem 3rem;
 }
 
-
 .bv_events {
 	margin-bottom: 3rem;
 }
@@ -229,9 +228,6 @@ figcaption:hover div:after{
 	.bv_main {
 		height: 60vh;
 	}
-	/*.bv_main .hero-body {
-		padding-top: 15rem;
-	}*/
 	.bv_main h1 {
 		font-size: 10vw;
     line-height: 12vw;
@@ -241,9 +237,6 @@ figcaption:hover div:after{
 		font-size: 4vw;
 	}
 }
-
-
-
 
 
 @-ms-viewport{
@@ -265,7 +258,6 @@ figcaption:hover div:after{
 
 .hero {
 	background-color: #323f48;
-	/*height: 100vh;*/
 }
 
 .email {

@@ -137,7 +137,23 @@ figcaption:hover div:after{
 
 
 .bv_mission {
-	margin: 0rem 3rem 5rem 3rem;
+	height: 100%;
+	background: url("assets/mission.png");
+	background-repeat: no-repeat;
+	background-size: 50vw;
+	background-position: top right 1rem;
+}
+
+.bv_mission h1{
+	font-weight: 900;
+	font-size: 10vw;
+	color: black;
+}
+
+.bv_mission p{
+	font-weight: 400;
+	font-size: 1.7vw;
+	color: black;
 }
 
 .bv_beehive {
@@ -163,30 +179,35 @@ figcaption:hover div:after{
 }
 
 
+/*
+	Media queries
+*/
 @media (max-width: 768px) {
 	.bv_locate {
 		height: 90vh;
 		padding: 0;
 	}
-
 	#m-r {
 		margin-right: 0 !important;
 	}
-
 	#calendar {
     padding: 0 !important;
 	}
-
 	.bv_main .hero-body {
 		padding-top: 10rem;
 	}
-
 	.bv_main h1 {
     line-height: 14vw;
+	}
+	.bv_mission p{
+		font-size: 2vw;
 	}
 }
 
 
+/*
+	Phone screens
+*/
 @media (max-width: 590px) {
 	.bv_main .hero-body {
 		padding-top: 15rem;
@@ -194,6 +215,9 @@ figcaption:hover div:after{
 	.bv_main h1 {
 		font-size: 10vw;
     line-height: 12vw;
+	}
+	.bv_mission p{
+		font-size: 3vw;
 	}
 }
 

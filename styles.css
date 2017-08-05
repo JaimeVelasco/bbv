@@ -226,9 +226,12 @@ figcaption:hover div:after{
 	Phone screens
 */
 @media (max-width: 590px) {
-	.bv_main .hero-body {
-		padding-top: 15rem;
+	.bv_main {
+		height: 60vh;
 	}
+	/*.bv_main .hero-body {
+		padding-top: 15rem;
+	}*/
 	.bv_main h1 {
 		font-size: 10vw;
     line-height: 12vw;

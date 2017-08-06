@@ -59,7 +59,11 @@ var user = firebase.auth().currentUser;
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 if (user) {
   // User is signed in.
-	ui.reset('#firebaseui-auth-container');
+	// Remove loginUI, wait for login to finish
+	setTimeout(function () {
+		ui.reset('#firebaseui-auth-container');
+	}, 2500);
+
 } else {
 	// Initialize the FirebaseUI Widget using Firebase.
 	// The start method will wait until the DOM is loaded.

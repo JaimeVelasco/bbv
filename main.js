@@ -10,7 +10,6 @@ var config = {
 
 firebase.initializeApp(config);
 
-
 // Get a reference to the database service
 var database = firebase.database();
 
@@ -30,9 +29,7 @@ var uiConfig = {
 	],
 	// Terms of service url.
 	tosUrl: '/tos'
-};
-
-
+}
 
 initApp = function() {
 	firebase.auth().onAuthStateChanged(function(user) {

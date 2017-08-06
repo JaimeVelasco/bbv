@@ -61,6 +61,7 @@ if (user) {
   // User is signed in.
 	// Remove loginUI, wait for login to finish
 	setTimeout(function () {
+		console.log("Now");
 		ui.reset('#firebaseui-auth-container');
 	}, 2500);
 

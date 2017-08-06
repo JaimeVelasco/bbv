@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bumblebee Vapes</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css" />
+		<link rel="stylesheet" href="styles.css">
+
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDTchze2Ms9gTlcaJW8J4wrP5BgyrQ_wlw",
+		    authDomain: "bumblebee-2053b.firebaseapp.com",
+		    databaseURL: "https://bumblebee-2053b.firebaseio.com",
+		    projectId: "bumblebee-2053b",
+		    storageBucket: "bumblebee-2053b.appspot.com",
+		    messagingSenderId: "847168397202"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+
+		<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+
+
+		<script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: '<url-to-redirect-to-on-success>',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+
+		<script
+		  src="https://code.jquery.com/jquery-2.2.4.min.js"
+		  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		  crossorigin="anonymous">
+		</script>
+
+	</head>
+	<body>
+
+		<nav class="navbar bv_nav">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/">
+					<img src="assets/Logo.png" alt="Bumblebee vapes" width="112" >
+				</a>
+
+				<div class="navbar-burger burger" data-target="navMenuExample">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+		  <div id="navMenu" class="navbar-menu">
+		    <div class="navbar-start">
+		      <a class="navbar-item" href="/">
+		        HOME.
+		      </a>
+		      <a class="navbar-item" href="#" id="products">
+		        PRODUCTS.
+		      </a>
+		      <a class="navbar-item" href="#" id="shop">
+		        SHOP.
+		      </a>
+		      <a class="navbar-item" href="#" id="events">
+		        EVENTS.
+		      </a>
+		      <a class="navbar-item" href="#" id="locator">
+		        LOCATOR.
+		      </a>
+		      <a class="navbar-item" href="#" id="faq">
+		        FAQ.
+		      </a>
+		    </div>
+
+				<div class="navbar-end">
+					<a class="navbar-item" href="https://www.instagram.com/bumblebeevape/">
+						<span class="icon">
+						  <i class="fa fa-instagram"></i>
+						</span>
+		      </a>
+					<a class="navbar-item" href="https://twitter.com/BumblebeeVape">
+						<span class="icon">
+						  <i class="fa fa-twitter"></i>
+						</span>
+		      </a>
+					<a class="navbar-item" href="#">
+						<span class="icon">
+						  <i class="fa fa-facebook"></i>
+						</span>
+		      </a>
+				</div>
+		  </div>
+		</nav>
+
+
+		<div class="modal" id="collector">
+		  <div class="modal-background"></div>
+		  <div class="modal-content">
+				<section class="hero">
+				  <div class="hero-body">
+						<div class="columns">
+							<div class="column">
+								<figure class="image is-64x64 centered">
+									<img src="assets/Bee.png" alt="bee">
+								</figure>
+							</div>
+						</div>
+						<div class="tile is-ancestor">
+							<div class="tile is-parent">
+								<div class="tile is-child">
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SI4kafjFHWw" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+
+						  <form id="pincheForm" class="tile is-6 is-vertical">
+								<div class="tile is-child is-12">
+									<p class="enterToWin">ENTER TO WIN $500</p>
+								</div>
+								<div class="tile">
+									<div class="tile is-child">
+										<div class="field">
+											<div class="control">
+												<input class="input" id="name" type="text" placeholder="NAME"  autofocus required>
+											</div>
+										</div>
+									</div>
+									<div class="tile is-child">
+										<div class="field ">
+											<div class="control">
+												<input class="input" id="zipCode" type="number" placeholder="ZIP CODE" required>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tile">
+									<div class="tile is-child">
+										<div class="field">
+											<div class="control">
+												<input class="input" id="email" type="email" placeholder="EMAIL" required>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tile">
+									<div class="tile is-child">
+										<button class="button is-light" id="formSubmit">LETS DO THIS</button>
+									</div>
+								</div>
+								<div class="tile">
+									<div class="tile is-child">
+										<button class="button is-link noThanks">NO THANKS</button>
+									</div>
+								</div>
+						  </form>
+
+						</div>
+				  </div>
+				</section>
+		  </div>
+		  <button class="modal-close is-large"></button>
+		</div>
+
+
+
+
+		<section class="bv_main hero">
+			<h1>Welcome to My Awesome App</h1>
+	    <div id="firebaseui-auth-container"></div>
+		</section>
+
+
+
+		<figure class="image bv_footer">
+		  <img src="assets/Footer.png">
+		</figure>
+
+		<script src="main.js"></script>
+
+	</body>
+</html>

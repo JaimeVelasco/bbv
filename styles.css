@@ -9,12 +9,9 @@
 }
 
 html, body{
-  /*margin: 0px;
-  padding: 0px;*/
   font-family: 'Lato',sans-serif;
   font-size: 18px;
   font-weight: 400;
-  /*height: 100%;*/
   color: #fff;
 }
 
@@ -118,7 +115,8 @@ figcaption:hover div:after{
 }
 
 .bv_main h1,
-.bv_beehive h1 {
+.bv_beehive h1,
+.bv_faq h1 {
 	font-weight: 900;
 	font-size: 9vw;
 	line-height: 10vw;
@@ -244,8 +242,13 @@ figcaption:hover div:after{
 }
 
 .bv_faq {
-	margin: 3rem 3rem 3rem 0;
+	margin: 3rem;
 }
+
+.bv_faq .box {
+	padding: 0;
+}
+
 
 #collector .modal-content {
 	width: 90vw;
@@ -349,4 +352,123 @@ input {
 
 .product:hover {
 
+}
+
+
+
+.bv_faq .tab-content{
+	display: none;
+}
+
+.bv_faq .tab-content.is-active{
+	display: block;
+}
+
+
+
+
+
+
+.bv_faq .no-select, h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.bv_faq ul {
+  list-style: none !important;
+}
+.bv_faq ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /*border-top: 1px dotted #dce7eb;*/
+}
+.bv_faq ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.bv_faq ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.bv_faq ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.bv_faq ul li:last-of-type {
+  padding-bottom: 0;
+}
+.bv_faq ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 7px;
+  right: 0;
+}
+.bv_faq ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #ff6873;
+  width: 3px;
+  height: 9px;
+}
+.bv_faq ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.bv_faq ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.bv_faq ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.bv_faq ul li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.bv_faq ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.bv_faq ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+
+.faqs .content h2 {
+    font-size: 1.1em;
+    margin-bottom: .5714em;
+		font-weight: 900;
+}
+
+.faqs .content h2:not(:first-child) {
+    margin-top: 1.0rem;
+}
+
+
+.faq_text {
+	font-weight: 200;
+}
+
+
+.tabs.is-boxed li.is-active a {
+	border-color: black;
+}
+
+.tabs ul {
+	border-bottom: 1px solid #000;
+}
+
+.faqs {
+	border: 1px solid black;
+	border-top-color: transparent;
+	position: relative;
+	bottom: 1.5rem;
 }

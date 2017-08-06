@@ -11,8 +11,14 @@ var config = {
 firebase.initializeApp(config);
 
 
-// Init firebase storage
-var storage = firebase.storage();
+// Get a reference to the database service
+var database = firebase.database();
+
+// return firebase.database().ref('/content/').once('value').then(function(snapshot) {
+//   var username = snapshot.val().username;
+// 	console.log("username", username);
+//   // ...
+// });
 
 
 // FirebaseUI config.
@@ -134,6 +140,8 @@ $('.noThanks').click(function() {
 		localStorage.setItem("bumbleBee", true);
 });
 
+
+
 // Submit email form
 $("#formSubmit").click(function(event) {
 	// get email, zip and name to be posted
@@ -181,7 +189,7 @@ $("#formSubmit").click(function(event) {
 
 	function validateEmail(email) {
 			var regex =  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-	    return regex.test(email)
+	    return regex.test(email);
 	}
 
 
@@ -197,3 +205,20 @@ $("#formSubmit").click(function(event) {
     return JSON.stringify(payload)
   }
 });
+// END OF SUBMIT FORM event
+
+// FAQ tabs
+$(document).ready(function(){
+	$('ul.tabsjs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		console.log("tab_id", tab_id);
+
+
+		$('ul.tabsjs li').removeClass('is-active');
+		$('.tab-content').removeClass('is-active');
+
+		$(this).addClass('is-active');
+		$("#"+tab_id).addClass('is-active');
+	})
+})

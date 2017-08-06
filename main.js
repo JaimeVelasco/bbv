@@ -54,13 +54,14 @@ window.addEventListener('load', function() {
 
 
 
-
+// Show login form only if user is not logged in
 var user = firebase.auth().currentUser;
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
 if (user) {
   // User is signed in.
+	ui.reset('#firebaseui-auth-container');
 } else {
 	// Initialize the FirebaseUI Widget using Firebase.
-	var ui = new firebaseui.auth.AuthUI(firebase.auth());
 	// The start method will wait until the DOM is loaded.
 	ui.start('#firebaseui-auth-container', uiConfig);
 }

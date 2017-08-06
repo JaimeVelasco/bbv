@@ -29,13 +29,13 @@
 		<script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
-        signInSuccessUrl: '<url-to-redirect-to-on-success>',
+        signInSuccessUrl: '/admin',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
           firebase.auth.GoogleAuthProvider.PROVIDER_ID
         ],
         // Terms of service url.
-        tosUrl: '<your-tos-url>'
+        tosUrl: '/tos'
       };
 
       // Initialize the FirebaseUI Widget using Firebase.

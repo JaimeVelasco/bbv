@@ -63,7 +63,7 @@ if (user) {
 	setTimeout(function () {
 		console.log("Now");
 		ui.reset('#firebaseui-auth-container');
-	}, 2500);
+	}, 300);
 
 } else {
 	// Initialize the FirebaseUI Widget using Firebase.

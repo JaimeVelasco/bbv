@@ -35,14 +35,7 @@
 							document.getElementById('sign-in-status').textContent = 'Signed in';
 							document.getElementById('sign-in').textContent = 'Sign out';
 							document.getElementById('account-details').textContent = JSON.stringify({
-								displayName: displayName,
-								email: email,
-								emailVerified: emailVerified,
-								phoneNumber: phoneNumber,
-								photoURL: photoURL,
-								uid: uid,
-								accessToken: accessToken,
-								providerData: providerData
+								displayName: displayName
 							}, null, '  ');
 						});
 					} else {
@@ -196,6 +189,9 @@
 		      <h1 class="title has-text-centered">
 						<div id="firebaseui-auth-container"></div>
 		        Sign-in to access Admin features.
+						Sign-in Status: <div id="sign-in-status"></div>
+						??: <div id="sign-in"></div>
+						Username: <div id="account-details"></div>
 		      </h1>
 		    </div>
 		  </div>

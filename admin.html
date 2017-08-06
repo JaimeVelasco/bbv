@@ -34,9 +34,7 @@
 						user.getIdToken().then(function(accessToken) {
 							document.getElementById('sign-in-status').textContent = 'Signed in';
 							document.getElementById('sign-in').textContent = 'Sign out';
-							document.getElementById('account-details').textContent = JSON.stringify({
-								displayName: displayName
-							}, null, '  ');
+							document.getElementById('account-details').textContent = displayName
 						});
 					} else {
 						// User is signed out.
@@ -187,10 +185,9 @@
 		  <div class="hero-body">
 		    <div class="container">
 		      <h1 class="title has-text-centered">
-						<div id="firebaseui-auth-container"></div>
 		        Sign-in to access Admin features.
+						<div id="firebaseui-auth-container"></div>
 						Sign-in Status: <div id="sign-in-status"></div>
-						??: <div id="sign-in"></div>
 						Username: <div id="account-details"></div>
 		      </h1>
 		    </div>

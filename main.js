@@ -1,3 +1,36 @@
+// Initialize Firebase
+var config = {
+	apiKey: "AIzaSyDTchze2Ms9gTlcaJW8J4wrP5BgyrQ_wlw",
+	authDomain: "bumblebee-2053b.firebaseapp.com",
+	databaseURL: "https://bumblebee-2053b.firebaseio.com",
+	projectId: "bumblebee-2053b",
+	storageBucket: "bumblebee-2053b.appspot.com",
+	messagingSenderId: "847168397202"
+};
+
+firebase.initializeApp(config);
+
+
+
+// FirebaseUI config.
+var uiConfig = {
+	signInSuccessUrl: '/bbv/admin.html',
+	signInOptions: [
+		// Leave the lines as is for the providers you want to offer your users.
+		firebase.auth.GoogleAuthProvider.PROVIDER_ID
+	],
+	// Terms of service url.
+	tosUrl: '/tos'
+};
+
+// Initialize the FirebaseUI Widget using Firebase.
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
+// The start method will wait until the DOM is loaded.
+ui.start('#firebaseui-auth-container', uiConfig);
+
+
+
+
 // Trigger Email modal if browser does not have cookie
 if (localStorage.getItem("bumbleBee") !== "true") {
 	setTimeout(function () {
@@ -10,6 +43,8 @@ $(".burger").click(function() {
 		$(".burger").toggleClass("is-active");
 		$(".navbar-menu").toggleClass("is-active");
 });
+
+
 
 
 $("#products").click(function() {

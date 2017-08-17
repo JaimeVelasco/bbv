@@ -208,14 +208,10 @@ $("#formSubmit").click(function(event) {
 $(document).ready(function(){
 	$('ul.tabsjs li').click(function(){
 		var tab_id = $(this).attr('data-tab');
-
-		console.log("tab_id", tab_id);
-
-
+		console.log("tab_id");
 		$('ul.tabsjs li').removeClass('is-active');
 		$('.tab-content').removeClass('is-active');
-
 		$(this).addClass('is-active');
 		$("#"+tab_id).addClass('is-active');
-	})
-})
+	});
+});

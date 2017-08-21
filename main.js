@@ -1,70 +1,70 @@
 // // Initialize Firebase
-// var config = {
-// 	apiKey: "AIzaSyDTchze2Ms9gTlcaJW8J4wrP5BgyrQ_wlw",
-// 	authDomain: "bumblebee-2053b.firebaseapp.com",
-// 	databaseURL: "https://bumblebee-2053b.firebaseio.com",
-// 	projectId: "bumblebee-2053b",
-// 	storageBucket: "bumblebee-2053b.appspot.com",
-// 	messagingSenderId: "847168397202"
-// };
-//
-// firebase.initializeApp(config);
-//
-// // Get a reference to the database service
-// var database = firebase.database();
-//
-// // return firebase.database().ref('/content/').once('value').then(function(snapshot) {
-// //   var username = snapshot.val().username;
-// // 	console.log("username", username);
-// //   // ...
-// // });
-//
-//
-// // FirebaseUI config.
-// var uiConfig = {
-// 	signInSuccessUrl: '/bbv/admin.html',
-// 	signInOptions: [
-// 		// Leave the lines as is for the providers you want to offer your users.
-// 		firebase.auth.GoogleAuthProvider.PROVIDER_ID
-// 	],
-// 	// Terms of service url.
-// 	tosUrl: '/tos'
-// }
-//
-// initApp = function() {
-// 	firebase.auth().onAuthStateChanged(function(user) {
-// 		var ui = new firebaseui.auth.AuthUI(firebase.auth());
-// 		if (user) {
-// 			// User is signed in.
-// 			var displayName = user.displayName;
-// 			var email = user.email;
-// 			var emailVerified = user.emailVerified;
-// 			var photoURL = user.photoURL;
-// 			var uid = user.uid;
-// 			var phoneNumber = user.phoneNumber;
-// 			var providerData = user.providerData;
-// 			user.getIdToken().then(function(accessToken) {
-// 				document.getElementById('account-details').textContent = "Welcome " + displayName
-// 			});
-// 			// Show login form only if user is not logged in
-// 			// Remove loginUI, wait for login to finish
-// 			ui.reset('#firebaseui-auth-container');
-// 		} else {
-// 			// User is signed out.
-// 			document.getElementById('account-details').textContent = 'Please Log in';
-// 			// Initialize the FirebaseUI Widget using Firebase.
-// 			// The start method will wait until the DOM is loaded.
-// 			ui.start('#firebaseui-auth-container', uiConfig);
-// 		}
-// 	}, function(error) {
-// 		console.log(error);
-// 	});
-// };
-//
-// window.addEventListener('load', function() {
-// 	initApp()
+var config = {
+	apiKey: "AIzaSyDTchze2Ms9gTlcaJW8J4wrP5BgyrQ_wlw",
+	authDomain: "bumblebee-2053b.firebaseapp.com",
+	databaseURL: "https://bumblebee-2053b.firebaseio.com",
+	projectId: "bumblebee-2053b",
+	storageBucket: "bumblebee-2053b.appspot.com",
+	messagingSenderId: "847168397202"
+};
+
+firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+
+// return firebase.database().ref('/content/').once('value').then(function(snapshot) {
+//   var username = snapshot.val().username;
+// 	console.log("username", username);
+//   // ...
 // });
-//
+
+
+// FirebaseUI config.
+var uiConfig = {
+	signInSuccessUrl: '/bbv/admin.html',
+	signInOptions: [
+		// Leave the lines as is for the providers you want to offer your users.
+		firebase.auth.GoogleAuthProvider.PROVIDER_ID
+	],
+	// Terms of service url.
+	tosUrl: '/tos'
+}
+
+initApp = function() {
+	firebase.auth().onAuthStateChanged(function(user) {
+		var ui = new firebaseui.auth.AuthUI(firebase.auth());
+		if (user) {
+			// User is signed in.
+			var displayName = user.displayName;
+			var email = user.email;
+			var emailVerified = user.emailVerified;
+			var photoURL = user.photoURL;
+			var uid = user.uid;
+			var phoneNumber = user.phoneNumber;
+			var providerData = user.providerData;
+			user.getIdToken().then(function(accessToken) {
+				document.getElementById('account-details').textContent = "Welcome " + displayName
+			});
+			// Show login form only if user is not logged in
+			// Remove loginUI, wait for login to finish
+			ui.reset('#firebaseui-auth-container');
+		} else {
+			// User is signed out.
+			document.getElementById('account-details').textContent = 'Please Log in';
+			// Initialize the FirebaseUI Widget using Firebase.
+			// The start method will wait until the DOM is loaded.
+			ui.start('#firebaseui-auth-container', uiConfig);
+		}
+	}, function(error) {
+		console.log(error);
+	});
+};
+
+window.addEventListener('load', function() {
+	initApp()
+});
+
 
 
 

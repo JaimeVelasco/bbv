@@ -235,7 +235,14 @@ figcaption:hover div:after{
 		font-size: 4vw;
 	}
 	.bv_faq {
-		margin: 0 !important;
+		margin: 3rem;
+	}
+}
+
+
+@media (min-width: 591px) {
+	.bv_faq {
+		margin: 3rem auto;
 	}
 }
 
@@ -245,7 +252,7 @@ figcaption:hover div:after{
 }
 
 .bv_faq {
-	margin: 3rem;
+	/*margin: 3rem auto;*/
 	height: 100%;
 	background: url("assets/FAQ.png");
 	background-repeat: no-repeat;

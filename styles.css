@@ -27,11 +27,10 @@ html, body{
 figcaption{
   position: absolute;
   left: 0; right: 0;
-  bottom: 2rem;
+	top: 6rem;
   font-weight: 900;
 	width: 9rem;
 	height: 3rem;
-  display: table;
 	margin: auto;
 	background: rgba(255,255,255,0.6);
 }
@@ -40,7 +39,8 @@ figcaption div{
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  top: 0px;
+	bottom: 1rem;
+  left: 2rem;
   opacity: 1;
   color: #2c3e50;
   text-transform: uppercase;
@@ -67,7 +67,6 @@ figcaption div:after{
 
 figcaption:hover div{
   opacity: 1;
-  top: 0;
 }
 
 figcaption:hover div:after{
@@ -229,9 +228,22 @@ figcaption:hover div:after{
     line-height: 100px;
 }
 
+
+.batteries{
+    text-align: center;
+		background-image: url("assets/battery.jpg");
+		background-position: center;
+		background-size: contain;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+}
+
 .product_header {
 	font-weight: 900;
 	font-size: 2rem;
+	position: relative;
 
 }
 
@@ -264,7 +276,7 @@ figcaption:hover div:after{
     padding: 0 !important;
 	}
 	.bv_main .container {
-		padding-top: 5rem;
+		padding-top: 4rem;
 	}
 	.bv_main h1 {
     line-height: 14vw;
@@ -275,12 +287,17 @@ figcaption:hover div:after{
 }
 
 
+
+.navbar-burger:hover {
+    background-color: transparent;
+}
+
 /*
 	Phone screens
 */
 @media (max-width: 590px) {
 	.bv_main {
-		height: 60vh;
+		height: 100%;
 	}
 	.bv_main h1 {
 		font-size: 10vw;

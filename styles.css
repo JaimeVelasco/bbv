@@ -27,12 +27,13 @@ html, body{
 figcaption{
   position: absolute;
   left: 0; right: 0;
-	top: 6rem;
+	top: 0; bottom: 0;
   font-weight: 900;
 	width: 9rem;
 	height: 3rem;
 	margin: auto;
-	background: rgba(255,255,255,0.6);
+	background: rgba(255,255,255,0.8);
+	opacity: 0;
 }
 
 .fg_shirts{
@@ -43,7 +44,7 @@ figcaption{
 	width: 9rem;
 	height: 3rem;
 	margin: auto;
-	background: rgba(255,255,255,0.6);
+	background: rgba(255,255,255,0.8);
 }
 
 figcaption div{
@@ -51,8 +52,8 @@ figcaption div{
   vertical-align: middle;
   position: relative;
 	bottom: 1.2rem;
-  opacity: 1;
-  color: #2c3e50;
+  opacity: 0;
+  color: #14a7b6;
   text-transform: uppercase;
 }
 
@@ -65,7 +66,7 @@ figcaption div:after{
   margin: auto;
   width: 0%;
   height: 2px;
-  background: #2c3e50;
+  background: #14a7b6;
 }
 
 .product img{
@@ -75,12 +76,17 @@ figcaption div:after{
           transform: scale3d(1, 1, 1);
 }
 
-figcaption:hover div{
+.product:hover  > .produc {
   opacity: 1;
 }
 
-figcaption:hover div:after{
+.product:hover  div{
+  opacity: 1;
+}
+
+.product:hover div:after{
   width: 50%;
+	opacity: 1;
 }
 
 .product:hover img{
@@ -151,6 +157,15 @@ a.navbar-item:hover {
     .fullscreen-bg__video {
         display: none;
     }
+
+		figcaption {
+			opacity: 1;
+		}
+
+		figcaption  div  {
+			opacity: 1;
+		}
+
 }
 
 
@@ -243,7 +258,7 @@ a.navbar-item:hover {
     margin: 0;
     line-height: 100px;
 }
-.shirt2{
+.shirt2 {
     text-align: center;
 		/*background-image: url("assets/yellow_on_darkgrey.jpg");*/
 		background-position: center;
@@ -254,7 +269,7 @@ a.navbar-item:hover {
     margin: 0;
     line-height: 100px;
 }
-.shirt3{
+.shirt3 {
     text-align: center;
 		/*background-image: url("assets/blue_on_darkgrey_womens.jpg");*/
 		background-position: center;
@@ -267,9 +282,9 @@ a.navbar-item:hover {
 }
 
 
-.cartdrige{
+.cartridge {
     text-align: center;
-		background-image: url("assets/cartdrige.jpg");
+		background-image: url("assets/cartridge.jpg");
 		background-position: center;
 		background-size: contain;
     color: white;
@@ -279,7 +294,7 @@ a.navbar-item:hover {
 }
 
 
-.batteries{
+.batteries {
     text-align: center;
 		background-image: url("assets/battery.jpg");
 		background-position: center;
@@ -294,7 +309,8 @@ a.navbar-item:hover {
 	font-weight: 900;
 	font-size: 2rem;
 	position: relative;
-
+	z-index: 100;
+	top: 2rem;
 }
 
 .bv_shop {
@@ -487,8 +503,15 @@ input {
 	padding: 5rem;
 }
 
-.product:hover {
-
+.product:before {
+		content: "";
+	  position: absolute;
+	  top: 2%;
+	  left:4%;
+	  height: 92%;
+	  width: 92%;
+		border: 2px solid white;
+		z-index: 100;
 }
 
 /* FAQ Section, CSS tabs */

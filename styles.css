@@ -107,23 +107,56 @@ figcaption:hover div:after{
 }
 
 .bv_main {
-	height: 80vh;
-	background: url("assets/headerOptimized.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 80% 20%;
+	height: 100vh;
+
 }
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('assets/headerOptimized.jpg') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
 
 .bv_main h1,
 .bv_beehive h1,
 .bv_faq h1 {
 	font-weight: 900;
 	font-size: 9vw;
-	line-height: 10vw;
+	line-height: 14vw;
 }
 
-.bv_main .hero-body {
-	padding-top: 5rem;
+.bv_main .container {
+	padding-top: 10rem;
 }
 
 .bv_main_copy {
@@ -141,6 +174,7 @@ figcaption:hover div:after{
 	background-repeat: no-repeat;
 	background-size: 50vw;
 	background-position: top right 1rem;
+	background-color: white;
 }
 
 .bv_mission h1{
@@ -207,7 +241,7 @@ figcaption:hover div:after{
 	#calendar {
     padding: 0 !important;
 	}
-	.bv_main .hero-body {
+	.bv_main .container {
 		padding-top: 10rem;
 	}
 	.bv_main h1 {

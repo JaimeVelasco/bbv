@@ -27,7 +27,7 @@ html, body{
 figcaption{
   position: absolute;
   left: 0; right: 0;
-	top: 6rem;
+	top: 0; bottom: 0;
   font-weight: 900;
 	width: 9rem;
 	height: 3rem;
@@ -201,7 +201,7 @@ figcaption:hover div:after{
 }
 
 .bv_pens {
-	margin: 0 0 3rem 0;
+	margin: 0;
 	top: .7rem;
 }
 
@@ -210,6 +210,40 @@ figcaption:hover div:after{
 		background-image: url("assets/Pen_Sour_diesel.jpg");
 		background-position: center;
 		background-size: contain;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+}
+
+.shirt{
+    text-align: center;
+		/*background-image: url("assets/yellow_on_darkgrey_womens.jpg");*/
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+}
+.shirt2{
+    text-align: center;
+		/*background-image: url("assets/yellow_on_darkgrey.jpg");*/
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+}
+.shirt3{
+    text-align: center;
+		/*background-image: url("assets/blue_on_darkgrey_womens.jpg");*/
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
     color: white;
     padding: 0;
     margin: 0;
@@ -248,7 +282,7 @@ figcaption:hover div:after{
 }
 
 .bv_shop {
-	margin: 0rem 3rem 5rem 3rem;
+	margin: 0;
 }
 
 .bv_events {

@@ -1,7 +1,8 @@
 # BumbleBee Vapes   
 ## A serverless mkt site and email collector  
 
-#### This is a very simple static site, hosted on Github Pages and using the following technologies:
+#### This is a simple static site, hosted on Github Pages and using the following technologies:
+
 ***Google App Platform*** (Google drive, Google Maps, Firebase).  
 [***Zapier***](https://zapier.com/app/explore)  For automation, mainly bringing form entries to Google Drive   
 [***Bulma***](http://bulma.io/)  CSS framework/style-guide.  

@@ -27,21 +27,21 @@ html, body{
 figcaption{
   position: absolute;
   left: 0; right: 0;
-  top: 0; bottom: 0;
-  text-align: center;
-  font-weight: bold;
+  bottom: 2rem;
+  font-weight: 900;
 	width: 9rem;
 	height: 3rem;
   display: table;
 	margin: auto;
+	background: rgba(255,255,255,0.6);
 }
 
 figcaption div{
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  top: 20px;
-  opacity: 0;
+  top: 0px;
+  opacity: 1;
   color: #2c3e50;
   text-transform: uppercase;
 }
@@ -63,10 +63,6 @@ figcaption div:after{
           transition: all 0.5s linear;
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
-}
-
-.product:hover figcaption{
- background: rgba(255,255,255,0.3);
 }
 
 figcaption:hover div{
@@ -208,6 +204,35 @@ figcaption:hover div:after{
 
 .bv_pens {
 	margin: 0 0 3rem 0;
+}
+
+.pen{
+    text-align: center;
+		background-image: url("assets/Pen_Sour_diesel.jpg");
+		background-position: center;
+		background-size: contain;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+}
+
+
+.cartdrige{
+    text-align: center;
+		background-image: url("assets/cartdrige.jpg");
+		background-position: center;
+		background-size: contain;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+}
+
+.product_header {
+	font-weight: 900;
+	font-size: 2rem;
+
 }
 
 .bv_shop {

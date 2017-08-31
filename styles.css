@@ -107,6 +107,11 @@ figcaption:hover div:after{
 	font-weight: 600;
 }
 
+a.navbar-item:hover {
+    background-color: transparent;
+    color: #0a0a0a;
+}
+
 .navbar-start {
 	margin: 0 auto;
 }

@@ -154,6 +154,9 @@ figcaption div:after {
 	width: 80%;
 	bottom: 4rem;
 	z-index: 100;
+	border: 2px solid black;
+	color: black;
+	font-weight: 900;
 }
 
 .bv_nav {

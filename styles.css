@@ -163,6 +163,16 @@ figcaption div:after {
 	background-color: #323f48;
 }
 
+.navMobileHalf {
+	width: 50vw;
+	float: left;
+
+}
+
+.mobileNav {
+	height: 17rem;
+}
+
 .navbar-burger span {
   background-color: white;
 }

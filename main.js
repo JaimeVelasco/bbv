@@ -68,6 +68,29 @@
 
 
 
+
+var distance = $('.bv_mission').offset().top,
+
+    $window = $(window);
+
+
+
+$window.scroll(function() {
+	// console.log("message", $('.fullscreen-bg__video').offset().top);
+
+	// $('.fullscreen-bg__video').css('display', 'none');
+	$window.scrollTop()
+    if ( $window.scrollTop() >= distance ) {
+        $('.fullscreen-bg').css('display', 'none');
+    }
+    else  {
+        $('.fullscreen-bg').css('display', 'block');
+    }
+});
+
+
+
+
 // Trigger Email modal if browser does not have cookie
 if (localStorage.getItem("bumbleBee") !== "true") {
 	setTimeout(function () {

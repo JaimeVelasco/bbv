@@ -113,12 +113,14 @@ figcaption:hover div:after{
 
 
 .fullscreen-bg {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    /*top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    overflow: hidden;
+    overflow: hidden;*/
+	 width: 100%;
+	 padding-top: 56.25%; /* 1:1 Aspect Ratio */
     z-index: -100;
 }
 
@@ -152,7 +154,7 @@ figcaption:hover div:after{
 .bv_faq h1 {
 	font-weight: 900;
 	font-size: 9vw;
-	line-height: 14vw;
+	line-height: 10vw;
 }
 
 .bv_main .container {

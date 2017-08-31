@@ -113,15 +113,10 @@ figcaption:hover div:after{
 
 
 .fullscreen-bg {
-    position: absolute;
-    /*top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;*/
-	 width: 100%;
-	 padding-top: 56.25%; /* 1:1 Aspect Ratio */
-    z-index: -100;
+	position: absolute;
+	width: 100%;
+	padding-top: 56.25%; /* 16:9 Aspect Ratio */
+	z-index: -100;
 }
 
 .fullscreen-bg__video {
@@ -244,7 +239,7 @@ figcaption:hover div:after{
     padding: 0 !important;
 	}
 	.bv_main .container {
-		padding-top: 10rem;
+		padding-top: 5rem;
 	}
 	.bv_main h1 {
     line-height: 14vw;

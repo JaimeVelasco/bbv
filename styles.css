@@ -39,8 +39,7 @@ figcaption div{
   display: table-cell;
   vertical-align: middle;
   position: relative;
-	bottom: 1rem;
-  left: 2rem;
+	bottom: 1.2rem;
   opacity: 1;
   color: #2c3e50;
   text-transform: uppercase;
@@ -203,6 +202,7 @@ figcaption:hover div:after{
 
 .bv_pens {
 	margin: 0 0 3rem 0;
+	top: .7rem;
 }
 
 .pen{

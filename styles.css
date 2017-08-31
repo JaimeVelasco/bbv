@@ -15,6 +15,14 @@ html, body{
   color: #fff;
 }
 
+.black {
+	color: black;
+}
+
+.modal {
+	z-index: 101;
+}
+
 .product {
   width: 100%;
   height: 100%;
@@ -64,6 +72,7 @@ figcaption div {
   opacity: 0;
   color: #14a7b6;
   text-transform: uppercase;
+	z-index: 100;
 }
 
 figcaption div:after {
@@ -123,6 +132,10 @@ figcaption div:after {
 .product:hover  div{
   opacity: 1;
 }
+
+.product  div{
+  left: 1.3rem;
+}
 .shop:hover  div{
   opacity: 1;
 }
@@ -150,7 +163,7 @@ figcaption div:after {
 	text-align: center;
 }
 
-.button {
+.shopBtn {
 	width: 80%;
 	bottom: 4rem;
 	z-index: 100;
@@ -311,9 +324,19 @@ a.navbar-item:hover {
 	color: white;
 }
 
+.is-radiusless {
+	border-radius: 0;
+}
+
 .bv_pens {
 	margin: 0;
 	top: .7rem;
+}
+
+.bv_pens_info {
+	font-size: 2rem;
+	font-weight: 900;
+	text-transform: capitalize;
 }
 
 .pen{

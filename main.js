@@ -68,24 +68,17 @@
 
 
 
-
+// Get video aligned to top and preserve aspect-ratio on all device sizes
 var distance = $('.bv_mission').offset().top,
-
-    $window = $(window);
-
-
-
+$window = $(window);
 $window.scroll(function() {
-	// console.log("message", $('.fullscreen-bg__video').offset().top);
-
-	// $('.fullscreen-bg__video').css('display', 'none');
-	$window.scrollTop()
-    if ( $window.scrollTop() >= distance ) {
-        $('.fullscreen-bg').css('display', 'none');
-    }
-    else  {
-        $('.fullscreen-bg').css('display', 'block');
-    }
+$window.scrollTop()
+  if ( $window.scrollTop() >= distance ) {
+      $('.fullscreen-bg').css('display', 'none');
+  }
+  else  {
+      $('.fullscreen-bg').css('display', 'block');
+  }
 });
 
 
@@ -94,7 +87,7 @@ $window.scroll(function() {
 // Trigger Email modal if browser does not have cookie
 if (localStorage.getItem("bumbleBee") !== "true") {
 	setTimeout(function () {
-		$(".modal").addClass("is-active");
+		$("#collector").addClass("is-active");
 	}, 1000);
 }
 
@@ -151,11 +144,27 @@ $("#faq").click(function() {
 // Close emailCollector
 $('.modal-close, .noThanks').click(function() {
 		$(".modal").removeClass("is-active");
+		// $(".modal").css("z-index", "101");
 });
 
 // Remove cookie if user declines email form
 $('.noThanks').click(function() {
 		localStorage.setItem("bumbleBee", true);
+		// $(".modal").css("z-index", "101");
+});
+
+
+// Pens info
+$('.pen1').click(function() {
+		$("#pen1").addClass("is-active");
+});
+
+$('.pen2').click(function() {
+		$("#pen2").addClass("is-active");
+});
+
+$('.pen3').click(function() {
+		$("#pen3").addClass("is-active");
 });
 
 

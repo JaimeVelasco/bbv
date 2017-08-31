@@ -15,7 +15,7 @@ html, body{
   color: #fff;
 }
 
-.product{
+.product {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -24,7 +24,16 @@ html, body{
   vertical-align: top;
 }
 
-figcaption{
+.shop {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+figcaption {
   position: absolute;
   left: 0; right: 0;
 	top: 0; bottom: 0;
@@ -36,7 +45,7 @@ figcaption{
 	opacity: 0;
 }
 
-.fg_shirts{
+.fg_shirts {
   position: absolute;
   left: 0; right: 0;
 	bottom: 2rem;
@@ -47,7 +56,7 @@ figcaption{
 	background: rgba(255,255,255,0.8);
 }
 
-figcaption div{
+figcaption div {
   display: table-cell;
   vertical-align: middle;
   position: relative;
@@ -57,7 +66,7 @@ figcaption div{
   text-transform: uppercase;
 }
 
-figcaption div:after{
+figcaption div:after {
   position: absolute;
   content: "";
   left: 0; right: 0;
@@ -69,18 +78,52 @@ figcaption div:after{
   background: #14a7b6;
 }
 
-.product img{
+.product img {
   -webkit-transition: all 0.5s linear;
           transition: all 0.5s linear;
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
 }
 
+.shop img {
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+
+.product:before {
+		content: "";
+	  position: absolute;
+	  top: 2%;
+	  left:4%;
+	  height: 92%;
+	  width: 92%;
+		border: 2px solid white;
+		z-index: 100;
+}
+
+.shop:before {
+		content: "";
+	  position: absolute;
+	  top: 2%;
+	  left:4%;
+	  height: 92%;
+	  width: 92%;
+		border: 0
+		z-index: 100;
+}
+
 .product:hover  > .produc {
   opacity: 1;
 }
 
+
 .product:hover  div{
+  opacity: 1;
+}
+.shop:hover  div{
   opacity: 1;
 }
 
@@ -93,7 +136,25 @@ figcaption div:after{
   -webkit-transform: scale3d(1.1, 1.1, 1);
           transform: scale3d(1.1, 1.1, 1);
 }
+.shop:hover div:after{
+  width: 50%;
+	opacity: 1;
+}
 
+.shop:hover img{
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+          transform: scale3d(1.1, 1.1, 1);
+}
+
+.centeredShop {
+	text-align: center;
+}
+
+.button {
+	width: 80%;
+	bottom: 4rem;
+	z-index: 100;
+}
 
 .bv_nav {
 	background-color: #323f48;
@@ -501,17 +562,6 @@ input {
 
 #calendar {
 	padding: 5rem;
-}
-
-.product:before {
-		content: "";
-	  position: absolute;
-	  top: 2%;
-	  left:4%;
-	  height: 92%;
-	  width: 92%;
-		border: 2px solid white;
-		z-index: 100;
 }
 
 /* FAQ Section, CSS tabs */

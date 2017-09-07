@@ -339,6 +339,10 @@ a.navbar-item:hover {
 	text-transform: capitalize;
 }
 
+.bv_pens_content {
+	
+}
+
 .pen{
     text-align: center;
 		background-image: url("assets/Pen_Sour_diesel.jpg");

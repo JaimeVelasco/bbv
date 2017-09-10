@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<title>Bumblebee Vapes</title>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -209,9 +209,6 @@
 			</div>
 		</section>
 
-
-
-
 		<section class="bv_mission ">
 			<div class="hero-body container">
 				<h1 class="is-capitalized">MISSION.</h1>
@@ -222,16 +219,14 @@
 			</div>
 		</section>
 
-
-		<figure class="image bv_beehive">
+		<section class="image bv_beehive">
 			<div class="hero-body container">
 				<h1 class="is-capitalized">OUR<br>BEEHIVE.</h1>
 				<p>
 					We are committed to your patients’ satisfaction and we pride ourselves in our quality, consistency and customer service. All of our products are tested at multiple stages with the most advanced equipment available. We invite you to experience why Bumblebee is becoming California’s favorite vaporizer
 				</p>
 			</div>
-		</figure>
-
+		</section>
 
 		<section class="image bv_pens">
 			<div class="columns">
@@ -304,7 +299,6 @@
 			</div>
 		</section>
 
-
 		<section class="image bv_shop">
 			<div class="columns">
 				<div class="column is-paddingless centeredShop">
@@ -328,27 +322,22 @@
 			</div>
 		</section>
 
+		<section class="bv_events" id="calendar">
+			<div id="app-container"></div>
+			<script>(function () {
+				window.eventCalId=564;
+				window.eventCalWidgetUuid="a8695840-5d3d-445b-bacd-b2d19ab44fdc";
+				var integrationScript = document.createElement("script");
+				integrationScript.async = 1;
+				integrationScript.setAttribute("src", "https://api.eventcalendarapp.com/integration-script.js");
+				document.head.appendChild(integrationScript);
+			})();
+			</script>
+		</section>
 
-		<figure class="bv_events">
-			<section id="calendar">
-				<div id="app-container"></div>
-				<script>(function () {
-					window.eventCalId=564;
-					window.eventCalWidgetUuid="a8695840-5d3d-445b-bacd-b2d19ab44fdc";
-					var integrationScript = document.createElement("script");
-					integrationScript.async = 1;
-					integrationScript.setAttribute("src", "https://api.eventcalendarapp.com/integration-script.js");
-					document.head.appendChild(integrationScript);
-				})();
-				</script>
-			</section>
-		</figure>
-
-
-		<figure class="image bv_locate">
+		<section class="image bv_locate">
 			<iframe width="100%" height="100%" src="https://thexs-mapping.firebaseapp.com/mapping.html?fid=0BwkEfFwNivP7Z01QaTU4NGFVdkU" frameborder="0" allowfullscreen></iframe>
-		</figure>
-
+		</section>
 
 		<section class="bv_faq has-text-black container">
 			<h1>FAQ.</h1>
@@ -553,12 +542,11 @@
 				</div>
 		</section>
 
-
 		<figure class="image bv_footer">
 		  <img src="assets/Footer.jpg">
 		</figure>
 
 		<script src="main.js"></script>
-
+		
 	</body>
 </html>

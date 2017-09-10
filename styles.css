@@ -460,6 +460,13 @@ a.navbar-item:hover {
 	}
 }
 
+/* Centered menu items on navbar*/
+@media screen and (min-width: 1000px) {
+	.navbar-end {
+		margin-left: 0;
+	}
+}
+
 
 
 .navbar-burger:hover {

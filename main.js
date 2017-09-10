@@ -83,13 +83,45 @@ $window.scrollTop()
 
 
 
-
+// Inital modal logic:
+// Age verification first, then email collector.
 // Trigger Email modal if browser does not have cookie
-if (localStorage.getItem("bumbleBee") !== "true") {
+if (localStorage.getItem("bumbleBee") !== "true" && $("#minAgeCheck").hasClass("is-active") === false ) {
 	setTimeout(function () {
 		$("#collector").addClass("is-active");
-	}, 1000);
+	}, 2000);
+};
+
+if (localStorage.getItem("overage") === "true") {
+	$("#minAgeCheck").removeClass("is-active");
+	if (localStorage.getItem("bumbleBee") !== "true") {
+		setTimeout(function () {
+			$("#collector").addClass("is-active");
+		}, 2000);
+	};
+} else {
+	$("#minAgeCheck").addClass("is-active");
 }
+
+// Close minAgeCheck
+$('#over').click(function() {
+		$(".modal").removeClass("is-active");
+		localStorage.setItem("overage", true);
+		if (localStorage.getItem("bumbleBee") !== "true") {
+			setTimeout(function () {
+				$("#collector").addClass("is-active");
+			}, 2000);
+		};
+});
+
+$('#under').click(function() {
+		$(".minAgeCheck").addClass("hidden");
+		$(".underAge").removeClass("hidden");
+		setTimeout(function () {
+			window.location.href = "http://www.apa.org/monitor/2015/11/marijuana-brain.aspx";
+		}, 3000);
+});
+
 
 // Toggle mobile menu
 $(".burger").click(function() {
@@ -144,13 +176,11 @@ $("#faq").click(function() {
 // Close emailCollector
 $('.modal-close, .noThanks').click(function() {
 		$(".modal").removeClass("is-active");
-		// $(".modal").css("z-index", "101");
 });
 
 // Remove cookie if user declines email form
 $('.noThanks').click(function() {
 		localStorage.setItem("bumbleBee", true);
-		// $(".modal").css("z-index", "101");
 });
 
 

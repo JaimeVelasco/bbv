@@ -23,6 +23,7 @@
 
 	 <script async type="text/javascript" src="https://d26b395fwzu5fz.cloudfront.net/keen-web-autocollector-1.0.8.min.js" onload="initKeenWebAutoCollector()"></script>
 	</head>
+
 	<body>
 		<nav class="navbar bv_nav">
 			<div class="navbar-brand">
@@ -168,7 +169,7 @@
 								</figure>
 							</div>
 						</div>
-						<div class="tile is-ancestor">
+						<div class="tile is-ancestor collectContainer">
 							<div class="tile is-parent">
 								<div class="tile is-child">
 									<video loop muted autoplay  poster="http://dummyimage.com/320x240/ffffff/fff" class="">
@@ -217,7 +218,10 @@
 									</div>
 								</div>
 						  </form>
-
+						</div>
+						<div class="sentMessage has-text-centered hidden">
+							<p class="enterToWin has-text-white">Thank you!</p>
+							<p class="has-text-white">You will be contacted if you win, make sure to have access to the email provided</p>
 						</div>
 				  </div>
 				</section>
@@ -571,9 +575,82 @@
 				</div>
 		</section>
 
-		<figure class="image bv_footer">
-		  <img src="assets/Footer.jpg">
-		</figure>
+		<section class="zig-zag-top">
+			<div class="container-fluid">
+				<div class="columns">
+					<div class="colum">
+						<h1 class="title">ENTER TO WIN $500</h1>
+
+						<form id="pincheForm2" class="tile is-6 is-vertical">
+							<div class="tile is-child is-12">
+								<p class="enterToWin">ENTER TO WIN $500</p>
+							</div>
+							<div class="tile">
+								<div class="tile is-child">
+									<div class="field">
+										<div class="control">
+											<input class="input" id="name" type="text" placeholder="NAME"  autofocus required>
+										</div>
+									</div>
+								</div>
+								<div class="tile is-child">
+									<div class="field ">
+										<div class="control">
+											<input class="input" id="zipCode" type="number" placeholder="ZIP CODE" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tile">
+								<div class="tile is-child">
+									<div class="field">
+										<div class="control">
+											<input class="input" id="email" type="email" placeholder="EMAIL" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tile">
+								<div class="tile is-child">
+									<button class="button is-light" id="formSubmit">LETS DO THIS</button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+					<div class="colum">
+						<h1 class="title">Section</h1>
+						<h2 class="subtitle">
+						A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+						</h2>
+					</div>
+					<div class="colum">
+						<h1 class="title">Section</h1>
+						<h2 class="subtitle">
+						A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+						</h2>
+					</div>
+				</div>
+			</div>
+	  </section>
+
+		<footer class="footer">
+		  <div class="container">
+		    <div class="content has-text-centered">
+					<figure class="image is-64x64 centered">
+						<img src="assets/Bee.png" alt="bee">
+					</figure>
+		      <p class="is-size-7 has-text-white">
+		        Copyright&copy; 2017 BUMBLEBEE LLC. ALL RIGHTS RESERVED
+		      </p>
+					<br>
+					<br>
+		      <p class="testLab is-size-7 has-text-white">
+		        TEST RESULTS Anresco Laboratories of San Francisco, CA provides comprehensive test results for each of our cannabis peoducts. Unlike many cannabis-only laboratories, Anresco is ISO accredited, FDA registered and has a proven track record of accurate results.
+		      </p>
+		    </div>
+		  </div>
+		</footer>
 
 		<script src="main.js"></script>
 

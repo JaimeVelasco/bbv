@@ -1,3 +1,10 @@
+
+// Make sure page doesn't scroll down on reload
+setTimeout(function () {
+	window.scrollTo(0, 0);
+}, 10);
+
+
 // Get video aligned to top and preserve aspect-ratio on all device sizes
 var distance = $('.bv_mission').offset().top,
 $window = $(window);

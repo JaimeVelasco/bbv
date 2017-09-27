@@ -220,7 +220,6 @@ a.navbar-item:hover {
 
 }
 
-
 .fullscreen-bg {
 	position: absolute;
 	width: 100%;
@@ -282,7 +281,6 @@ a.navbar-item:hover {
 	text-transform: uppercase;
 	line-height: 4rem
 }
-
 
 .bv_mission {
 	height: 100%;
@@ -372,6 +370,7 @@ a.navbar-item:hover {
     margin: 0;
     line-height: 100px;
 }
+
 .shirt2 {
     text-align: center;
 		/*background-image: url("assets/yellow_on_darkgrey.jpg");*/
@@ -383,6 +382,7 @@ a.navbar-item:hover {
     margin: 0;
     line-height: 100px;
 }
+
 .shirt3 {
     text-align: center;
 		/*background-image: url("assets/blue_on_darkgrey_womens.jpg");*/
@@ -395,7 +395,6 @@ a.navbar-item:hover {
     line-height: 100px;
 }
 
-
 .cartridge {
     text-align: center;
 		background-image: url("assets/cartridge.jpg");
@@ -406,7 +405,6 @@ a.navbar-item:hover {
     margin: 0;
     line-height: 100px;
 }
-
 
 .batteries {
     text-align: center;
@@ -473,7 +471,6 @@ a.navbar-item:hover {
 	}
 }
 
-
 #minAgeCheck .title {
 	color: white;
 }
@@ -481,8 +478,6 @@ a.navbar-item:hover {
 #minAgeCheck .button {
 	margin-bottom: 1rem;
 }
-
-
 
 .navbar-burger:hover {
     background-color: transparent;
@@ -508,13 +503,11 @@ a.navbar-item:hover {
 	}
 }
 
-
 @media (min-width: 591px) {
 	.bv_faq {
 		margin: 3rem auto;
 	}
 }
-
 
 @-ms-viewport{
   width: device-width;
@@ -533,12 +526,11 @@ a.navbar-item:hover {
 	padding: 0;
 }
 
-
 #collector .modal-content {
 	width: 90vw;
 }
 
-#collector .input {
+#collector .input, #pincheform2 .input {
 	background-color: #9ba1a5;
 	border: solid 0 transparent;
 }
@@ -602,7 +594,7 @@ input {
 	font-size: 1.5rem;
 }
 
-#formSubmit {
+#formSubmit, #formSubmit2 {
 	background-color: #19a3a9;
 	border: none;
 	border-radius: 0;
@@ -611,7 +603,7 @@ input {
 	color: #323f48;
 }
 
-#formSubmit:hover {
+#formSubmit:hover, , #formSubmit2:hover {
 	background-color: #0d595d;
 	color: white;
 }

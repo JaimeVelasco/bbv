@@ -147,7 +147,7 @@ $('ul.tabsjs li').click(function(){
 
 
 
-// Submit email form
+// Submit MODAL email form
 $("#formSubmit").click(function(event) {
  // get email, zip and name to be posted
  var email = document.getElementById('email').value
@@ -196,23 +196,95 @@ $("#formSubmit").click(function(event) {
 			 };
 	 }
  }
-
-
  function formatForZapier(email, zipCode, name){
-	 var date = new Date()
-	 var payload ={
-		 "email": email,
-		 "name": name,
-		 "zipCode": zipCode,
-		 "date": date.toLocaleString('en-US')
-	 };
-	 // return json string of payload
-	 return JSON.stringify(payload)
+ 	var date = new Date()
+ 	var payload ={
+ 		"email": email,
+ 		"name": name,
+ 		"zipCode": zipCode,
+ 		"date": date.toLocaleString('en-US')
+ 	};
+ 	// return json string of payload
+ 	return JSON.stringify(payload)
  }
 
  function validateEmail(email) {
-		 var regex =  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-		 return regex.test(email);
+ 	// 	var regex =  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+ 		return regex.test(email);
  }
 });
-// END OF SUBMIT FORM event
+// END OF SUBMIT MODAL FORM event
+
+
+
+// Submit FOOTER email form
+$("#formSubmit2").click(function(event) {
+ // event.preventDefault()
+ // get email, zip and name to be posted
+ var email2 = document.getElementById('email2').value
+ var zipCode = document.getElementById('zipCode2').value
+ var name = document.getElementById('name2').value
+ // format payload for zapier
+ var zdata2 = formatForZapier2(email2, zipCode, name)
+ // If no empty fields
+ if (email2 !== "" && zipCode !== "" && name !== "") {
+	 if (validateEmail2(email2)) {
+			event.preventDefault()
+			console.log(`zdata2 ${zdata2}`);
+		//  post to Zapier webhook
+		 $.ajax({
+			 url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
+			 type: 'POST',
+			 processData: true,
+			 data : zdata2 ,
+			 success : function(data) {
+				//  Provide feedback to user
+				 $("#pincheForm2").addClass("hidden")
+				 $(".sentMessage2").removeClass("hidden")
+
+				//  Set localStorage item on browser
+				 localStorage.setItem("bumbleBee", true);
+
+				//  reload/submit after 3 seconds
+				//  setTimeout(function () {
+				// 	 $("#pincheForm2").submit()
+				//  }, 3000);
+			 },
+			 error: function(data){
+				 console.log("error", data)
+			 }
+		 });
+	 } else if (!validateEmail2(email2)){
+		 // Validate Email form (on top of HTML5's built in validation)
+		 var element = document.getElementById("email2");
+		 element.oninvalid = function(e) {
+				 e.target.setCustomValidity("");
+				 if (!e.target.validity.valid) {
+						 e.target.setCustomValidity("Something is wrong with your email");
+				 }
+		 };
+		 element.oninput = function(e) {
+				e.target.setCustomValidity("");
+		 };
+	 }
+ }
+
+
+ function formatForZapier2(email2, zipCode, name){
+  var date = new Date()
+  var payload ={
+ 	 "email": email2,
+ 	 "name": name,
+ 	 "zipCode": zipCode,
+ 	 "date": date.toLocaleString('en-US')
+  };
+  // return json string of payload
+  return JSON.stringify(payload)
+ }
+
+ function validateEmail2(email2) {
+ 	 var regex =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ 	 return regex.test(email2);
+ }
+});
+// END OF SUBMIT footer FORM event

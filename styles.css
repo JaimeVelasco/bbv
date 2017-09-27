@@ -796,3 +796,19 @@ input {
 .zig-zag-top .subtitle{
 	color: white;
 }
+ .ftr {
+	 padding-top: 10px;
+	 padding-bottom: 1rem;
+ }
+
+a.is-white {
+	color: white !important;
+}
+
+a.is-white:hover {
+	color: lightgray !important;
+}
+
+.socialLinks .fa {
+	padding: 1rem;
+}

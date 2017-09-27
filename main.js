@@ -111,7 +111,7 @@ $("#faq").click(function() {
 
 
 // Close emailCollector
-$('.modal-close, .noThanks').click(function() {
+$('.modal-close, .noThanks, .modal-background').click(function() {
 	 $(".modal").removeClass("is-active");
 });
 

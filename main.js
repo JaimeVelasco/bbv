@@ -2,6 +2,7 @@
 // Make sure page doesn't scroll down on reload
 setTimeout(function () {
 	window.scrollTo(0, 0);
+	// $('#btn-fit').trigger('click');
 }, 10);
 
 

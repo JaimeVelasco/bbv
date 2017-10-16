@@ -3,7 +3,7 @@
 setTimeout(function () {
 	window.scrollTo(0, 0);
 	// $('#btn-fit').trigger('click');
-}, 10);
+}, 100);
 
 
 // Get video aligned to top and preserve aspect-ratio on all device sizes
@@ -12,10 +12,10 @@ $window = $(window);
 $window.scroll(function() {
 $window.scrollTop()
  if ( $window.scrollTop() >= distance ) {
-		 $('.fullscreen-bg').css('display', 'none');
+		 $('.fullscreen-bg').css('display', 'none')
  }
  else  {
-		 $('.fullscreen-bg').css('display', 'block');
+		 $('.fullscreen-bg').css('display', 'block')
  }
 });
 
@@ -162,7 +162,8 @@ $("#formSubmit").click(function(event) {
 			event.preventDefault()
 		 // post to Zapier webhook
 		 $.ajax({
-			 url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
+			//  url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
+			 url: 'https://hooks.zapier.com/hooks/catch/2620486/i5t3ex/',
 			 type: 'POST',
 			 processData: true,
 			 data : zdata ,
@@ -234,7 +235,7 @@ $("#formSubmit2").click(function(event) {
 			console.log(`zdata2 ${zdata2}`);
 		//  post to Zapier webhook
 		 $.ajax({
-			 url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
+			 url: 'https://hooks.zapier.com/hooks/catch/2620486/i5t3ex/',
 			 type: 'POST',
 			 processData: true,
 			 data : zdata2 ,

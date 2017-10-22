@@ -162,7 +162,6 @@ $("#formSubmit").click(function(event) {
 			event.preventDefault()
 		 // post to Zapier webhook
 		 $.ajax({
-			//  url: 'https://hooks.zapier.com/hooks/catch/2256084/5e9szr/',
 			 url: 'https://hooks.zapier.com/hooks/catch/2620486/i5t3ex/',
 			 type: 'POST',
 			 processData: true,

@@ -25,7 +25,7 @@ $window.scrollTop()
 if (localStorage.getItem("bumbleBee") !== "true" && $("#minAgeCheck").hasClass("is-active") === false ) {
  setTimeout(function () {
 	 $("#collector").addClass("is-active");
- }, 2000);
+ }, 100);
 };
 
 if (localStorage.getItem("overage") === "true") {

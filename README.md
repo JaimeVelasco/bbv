@@ -1,5 +1,5 @@
-# BumbleBee Vapes   
-## A serverless mkt site and email collector  
+# BumbleBee Vape  
+## A serverless mkt website and email collector  
 
 #### This is a simple static site, hosted on Github Pages and using the following technologies:
 

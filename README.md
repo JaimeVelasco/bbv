@@ -16,7 +16,6 @@
 4. That's it! Updates will take effect almost instantly.
 
 # Updating Map
-#### Map spreadsheet
 We use a google spreadsheet and an add-on called [Mapping Sheets](http://www.thexs.ca/xsmapping) to add locations to the map. To update map we will need to take a few steps:
 
 1. Go to the google spreadsheet that contains map data [Link to google drive document](https://docs.google.com/spreadsheets/d/1Lr-h5Wb1zVJfrzmavVAHf3tRWrCuzFpXZC-wd-4_bJk/edit#gid=0)
@@ -31,6 +30,6 @@ Using Zapier to save entries from the email collector into this spreadsheet.
 
 
 Recurring Costs:
-Github $25 month for private repo and hosting.
-Zappier: $8 Month for handling email form
-Mapping Sheets: $25 a year
+Github $25 month for private repo and hosting.  
+Zappier: $8 Month for handling email form  
+Mapping Sheets: $25 a year  

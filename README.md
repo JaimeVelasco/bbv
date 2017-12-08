@@ -24,12 +24,12 @@ We use a google spreadsheet and an add-on called [Mapping Sheets](http://www.the
 4. After editing locations on spreadsheet we need to update map, go to `add-on => Mapping Sheets => Start Mapping` then click on the red BUILD button and that should be it, unless a new URL was generated. If this is the case, we will need to replace the URL on codebase to reflect changes. Get the URL by clicking on the blue VIEW button.
 
 
-#### Email spreadsheet
+## Email spreadsheet
 Using Zapier to save entries from the email collector into this spreadsheet.  
 [Link to google drive document](https://docs.google.com/a/jaimevelas.co/spreadsheets/d/1zdrFPnuwliUh2t7GMP--2sry2s3I9HwcdC4oqa8sobc/edit?usp=sharing)
 
 
-Recurring Costs:
+## Recurring Costs:  
 Github $25 month for private repo and hosting.  
 Zappier: $8 Month for handling email form  
 Mapping Sheets: $25 a year  
